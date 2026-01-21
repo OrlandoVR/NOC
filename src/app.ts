@@ -11,10 +11,10 @@ import { envs } from './config/plugins/envs.plugin.js';
 
 function main() {
 
-    // ServerApp.start();
-    console.log(envs.PORT);
-    console.log(envs.MAILER_EMAIL);
-    console.log(envs.MAILER_SECRET_KEY);
-    console.log(envs.PROD);
+    ServerApp.start();
+    // console.log(envs.PORT);
+    // console.log(envs.MAILER_EMAIL);
+    // console.log(envs.MAILER_SECRET_KEY);
+    // console.log(envs.PROD);
 
 }
