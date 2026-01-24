@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import { ServerApp } from "./presentation/server.js";
+import { MongoDatabase } from './data/mongo/index.js';
 import { envs } from './config/plugins/envs.plugin.js';
-
 
 (async() => {
 
@@ -9,12 +9,14 @@ import { envs } from './config/plugins/envs.plugin.js';
 
 })();
 
-function main() {
+async function main() {
+
+    await MongoDatabase.connect({
+        mongoUrl: envs.MONGO_URL,
+        dbName: envs.MONGO_DB_NAME
+    });
 
     ServerApp.start();
-    // console.log(envs.PORT);
-    // console.log(envs.MAILER_EMAIL);
-    // console.log(envs.MAILER_SECRET_KEY);
-    // console.log(envs.PROD);
+
 
 }

@@ -11,3 +11,13 @@ dist/
 logs/
 
 .env
+
+mongo/
+postgres/
+/src/generated/prisma
+
+/src/generated/prisma
+
+/src/generated/prisma
+
+/src/generated/prisma
